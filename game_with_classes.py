@@ -1,6 +1,5 @@
 import random
 from game_classes import Player
-# TODO: The correct formatting of stacking the imports is like this
 from game_functions import (
 	print_game,
 	print_coordinate_hints,
