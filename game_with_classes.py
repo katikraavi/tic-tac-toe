@@ -60,10 +60,8 @@ while game:
 	# condition = "correct"
 
 	# check for a valid number between 1 and 9
-	while nr_criteria(player_1.replacing_coord) != "nr is in range":
-		# TODO: Do you expect all the players to always be an X,
-		#  even if you allow them to choose their mark?
-		player_1.replacing_coord = input(f"Place X in valid coordinate: ")
+	while nr_criteria(player_1.replacing_coord) != "nr is in range ":
+		player_1.replacing_coord = input(f"Place your mark in valid coordinate: ")
 
 	# Print the symbol in chosen coordinate
 	symbol_in_board = current_symbol(tic_tac_toe, coordinates, player_1.replacing_coord)
@@ -71,8 +69,7 @@ while game:
 		print(f"This place has been taken by: {symbol_in_board}")
 		player_1.replacing_coord = input("Place X in unused coordinate: ")
 		while nr_criteria(player_1.replacing_coord) != "nr is in range":
-			# TODO: No need for f'' string if you do not put any variable inside.
-			replace_coord_X = input(f"Place X in valid coordinate: ")
+			replace_coord_X = input("Place X in valid coordinate: ")
 		symbol_in_board = current_symbol(tic_tac_toe, coordinates, player_1.replacing_coord)
 
 	# Replace chosen coordinate to "X" in board game "tic_tac_toe", print new board:
