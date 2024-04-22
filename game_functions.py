@@ -17,12 +17,6 @@ def get_valid_coordinate(input_coordinate):
 		return input_coordinate
 
 
-def number_is_digit(test_number):
-	if test_number.isdigit():
-		# TODO: .isdigit() returns Boolean, so no need to make a separate function.
-		return "digit"
-
-
 def find_coordinate_index(unused_coordinates, replacing_coordinate):
 	for row_ in unused_coordinates:
 		if replacing_coordinate in row_:
@@ -30,14 +24,13 @@ def find_coordinate_index(unused_coordinates, replacing_coordinate):
 
 
 def nr_criteria(input_coordinate):
-	# TODO: .isdigit returns True or False, so it is just enough to if input_coordinate.isdigit():
-	if number_is_digit(input_coordinate) != "digit":
+	if not input_coordinate.isdigit:
 		return "not digit"
 	if 10 < int(input_coordinate) < 1:
 		return "NOT IN RANGE number"
-	if 0 < int(input_coordinate) < 10 and number_is_digit(input_coordinate) == "digit":
+	if 0 < int(input_coordinate) < 10 and input_coordinate.isdigit() == False:
 		return "nr is in range"
-	if number_is_digit(input_coordinate) == "digit":
+	if input_coordinate.isdigit():
 		return "nr is digit, but not in range"
 
 
