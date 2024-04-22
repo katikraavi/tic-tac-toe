@@ -38,6 +38,8 @@ continue_game = True
 play_agen = "0"
 print(f"You will play against computer, computer will be {player_2.mark}")
 player_1.mark = input(f"Choose your mark: ")
+if player_1.mark == "0":
+	print("I see you want to be on the same team with the computer ... ok, lets see if this is possible. ")
 
 while game:
 	skip_second_player = False
@@ -46,12 +48,11 @@ while game:
 
 	if play_agen == "1":
 		print(f"your mark was {player_1.mark}")
-
 		print(f"you can chose the same mark or change it to something else:")
 
-		# TODO: If I choose 0, the player_2 also will be 0 by default,
-		#  and then there are no differences in players in the field.
 		player_1.mark = input("print you mark: ")
+		if player_1.mark == "0":
+			print("Same as the computer? Now this will be interesting, have fun!. ")
 	play_agen = "0"
 
 	# Player X choice
