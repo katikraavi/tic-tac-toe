@@ -6,19 +6,3 @@ class Player:
 		self.winner = winner
 		self.replacing_coord = replacing_coord
 		self.nr_of_wins = nr_of_wins
-
-
-# TODO: You have already created a Player object in game_with_classes.py
-player_1 = Player(
-	"X",
-	False,
-	None,
-	0
-)
-
-player_2 = Player(
-	"O",
-	False,
-	None,
-	0
-)
