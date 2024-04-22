@@ -47,7 +47,6 @@ while game:
 	if play_agen == "1":
 		print(f"your mark was {player_1.mark}")
 
-		# TODO: No need for f'' string if you do not put any variable inside.
 		print(f"you can chose the same mark or change it to something else:")
 
 		# TODO: If I choose 0, the player_2 also will be 0 by default,
